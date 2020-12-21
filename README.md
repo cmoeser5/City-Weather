@@ -31,3 +31,24 @@ linear regression respectively.
 ![South_vs_temp](WeatherPy/images/Southern_Hemisphere-Max_Temp_vs_Lat.png)
 
 ![north_vs_temp](WeatherPy/images/Northern_Hemisphere-Max_Temp_vs_Lat.png)
+
+## VactionPy
+### Objective
+Plan future vacations but using the previously made city weather csv to find locations with the most ideal
+weather.
+
+#### Create a Data Frame of Cities with Ideal Weather
+This dataframe was created by dropping rows with the max temperature over 90 or under 60, windspeeds over 10 mph,
+and cloudiness abover 40%
+
+#### Obtain First Hotel in each City Using Google Places API
+For vacation planning, the first step is always to look at hotels in each city. This was done using Google Places Nearby Search API. The location parameter takes a very specific format of coordinates, so a new column was added to the dataframe by adding the latitude and longitude columns together, as strings, and separated by a comma. Similar to processing the weather APIs, first an extract function was define followed by a for loop iterating over the combined lat/lng column as a list. A record was printed for each coordinates in the try/except block to note when a hotel was found or not. The data was then extracted, appended to an empty list, and turned into a dataframe.
+
+#### Merging Data Frames and Plotting
+In order to merge the city weather data frame with the new hotels data frame, first the latitude and longitude columns needed to be rounded to the 0 decimal. Anything larger than 0 would not match up in the merge. The columns were then renamed for cleaner output in map plot.
+
+The merged data frame was plotted using Plotly and Mapbox with the latitude and longitude of the hotels. The heatmap was created by assigning the Humidity column to color which colors cities by humidity percentage. Hover data shows the coordates, city, country, hotel name, and humidity for each plot point.
+
+
+
+
