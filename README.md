@@ -23,4 +23,11 @@ when compared along the latitude for both the northern and southern hemisphere. 
 made, separating the latitudes into southern and northern hemispheres to compare the weather trends and
 linear regression respectively.
 
-![Lat Vs Temp](WeatherPy/ouput_data/Latitude_vs_Max_Temp_scatter.png)
+
+![Lat_Vs_Temp](WeatherPy/images/Latitude_vs_Max_Temp_scatter.png)
+
+![Lat_vs_Hum](WeatherPy/images/Latitude_vs_Humidity_scatter.png)
+
+![South_vs_temp](WeatherPy/images/Southern_Hemisphere-Max_Temp_vs_Lat.png)
+
+![north_vs_temp](WeatherPy/images/Northern_Hemisphere-Max_Temp_vs_Lat.png)
